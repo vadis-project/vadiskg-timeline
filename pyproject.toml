@@ -1,0 +1,82 @@
+[project]
+name = "vadiskg"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "sobamchan", email = "oh.sore.sore.soutarou@gmail.com" }
+]
+dependencies = [
+    "matplotlib>=3.9.2",
+    "networkx[default]>=3.3",
+    "pandas>=2.2.3",
+    "rdflib>=7.1.1",
+    "seaborn>=0.13.2",
+    "streamlit>=1.39.0",
+]
+readme = "README.md"
+requires-python = ">= 3.11"
+
+[tool.uv]
+dev-dependencies = [
+    "black>=24.10.0",
+    "ipython>=8.28.0",
+    "isort>=5.13.2",
+    "mypy>=1.11.2",
+    "neovim>=0.3.1",
+    "null>=0.6.1",
+    "pyright>=1.1.383",
+    "pytest>=8.3.3",
+    "ruff-lsp>=0.0.57",
+    "ruff>=0.6.9",
+]
+
+[tool.black]
+line-length = 88
+
+[tool.ruff]
+src = ["src"]
+line-length = 88
+
+[tool.ruff.lint]
+select = [
+  "E",  # pycodestyle errors
+  "W",  # pycodestyle warnings
+  "F",  # pyflakes
+  "I",  # isort
+  "C4",  # flake8-comprehensions
+  "B",  # flake8-bugbear
+  "TCH",  # flake8-type-checking
+  "TID",  # flake8-tidy-imports
+  "SIM", # flake8-simplify
+  "Q", # flake8-quotes
+  "PIE", # flake8-pie
+  "UP",  # pyupgrade
+  "PT",  # flake8-pytest-style
+  "C90",  # mccabe
+]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 18
+
+[tool.ruff.lint.isort]
+split-on-trailing-comma = false
+
+[tool.ruff.lint.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+[tool.ruff.lint.flake8-type-checking]
+strict = true
+
+[tool.mypy]
+files = ["src", "tests"]
+strict = true
+pretty = true
+
+[[tool.mypy.overrides]]
+module = []
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpath = ["tests"]
+addopts = "--cov=vadiskg --cov-report=term-missing -vv"

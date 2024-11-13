@@ -1,7 +1,3 @@
-Sure! Here's the reformatted README based on the template you provided, with the necessary sections and structure applied:
-
----
-
 <!-- PROJECT SHIELDS -->
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
@@ -111,7 +107,3 @@ Sotaro Takeshita - sotaro.takeshita@uni-mannheim.de
 [license-shield]: https://img.shields.io/github/license/vadis-project/vadiskg.svg?style=for-the-badge
 [license-url]: https://github.com/vadis-project/vadiskg/blob/master/LICENSE
 [product-screenshot]: images/screenshot.png
-
----
-
-This version of the README closely follows the template structure while applying the relevant details from your provided text. It includes sections such as "Getting Started", "Usage", "Roadmap", and "License" to make the repository easier to navigate.
